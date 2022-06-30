@@ -1,0 +1,157 @@
+body {
+    box-sizing: border-box;
+}
+
+.main {
+    background-color: aqua;
+    display: flex;
+    height: 100vh;
+    background-color: #125B50;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.calculator {
+    display: flex;
+    background-color: #D3CEDF;
+    height: 80%;
+    width: 370px;
+    flex-direction: column;
+    border: 1px solid black;
+    position: absolute;
+    border-radius: 20px;
+}
+
+.name {
+    margin: 5px;
+}
+
+.cont-display {
+    display: flex;
+    margin-top: 28px;
+    align-self: center;
+    background-color: black;
+    height: 18%;
+    width: 90%;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.cont-display .display {
+    background-color: #748DA6;
+    padding: 10px;
+    width: 90%;
+    font-size: 30px;
+    display: flex;
+    height: 65%;
+    border-radius: 10px;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.button {
+    display: grid;
+    grid-template-areas: "btn_top btn_top btn_top"
+                                "hr hr hr"
+                        "btn_left btn_left btn_right";
+    grid-template-rows: auto auto 1fr;
+    margin-top: 50px;
+    grid-template-columns: 30% 44% auto;
+    padding-left: 18px;
+
+}
+
+.button button {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.button .btn_top {
+    grid-area: btn_top;
+    display: flex;
+}
+
+.btn_top button, .btn_left button, .btn_right button {
+    width: 60px;
+    height: 45px;
+    font-size: 25px;
+
+    margin: 10px;
+    justify-content: space-evenly;
+    color: white;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: #090841;
+}
+
+.btn_top #on-off {
+    font-size: 13px;
+}
+
+.btn_top button {
+    margin-left: 12.3px;
+}
+
+.btn_right button {
+    margin: 10px 0;
+}
+
+.button .btn_left {
+    grid-area: btn_left;
+}
+
+.button .btn_right {
+    grid-area: btn_right;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+#addition {
+    height: 110px;
+}
+
+.calculator hr {
+    grid-area: hr;
+    margin-top: 10px;
+    border: 1px solid black;
+    width: 90%;
+}
+
+footer {
+    display: flex;
+    margin-top: 500px;
+    background-color: black;
+    height: 40%;
+    width: 100%;
+    font-size: large;
+    color: white;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+footer .record {
+    display: flex;
+    background-color: white;
+    width: 20%;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 20px;
+    height: 180px;
+    color: black;
+}
+
+.record #display-record {
+    overflow: scroll;
+    width: 90%;
+    border-radius: 5px;
+    align-self: center;
+    height: 90%;
+}
+
+footer .myinfo, footer .record {
+    margin: 30px;
+}
